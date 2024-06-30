@@ -3,6 +3,8 @@
 import { baseUrl } from '@/app/utils/baseUrl';
 import Link from 'next/link';
 import React from 'react';
+import { IoCloseSharp } from "react-icons/io5";
+
 
 const page =async ({params}) => {
 
@@ -15,26 +17,26 @@ const page =async ({params}) => {
     
 
   return (
-    <div className="lg:p-4 fixed inset-0 bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center">
-    <div className='w-full max-w-4xl mx-auto flex-col gap-4 lg:flex-row overflow-y-scroll lg:overflow-y-hidden h-screen flex items-start lg:items-center lg:h-[400px] bg-white rounded-md p-2'>
-       <img src={produto.urlImage} alt="" className='w-full lg:max-w-[400px] lg:rounded-tl-md lg:rounded-bl-md'/>
-       
-       <div className='relative flex flex-col  h-[400px] w-full'>
-        <div className='border-b py-2 flex justify-between pr-2'>
-            <h1 className='font-bold text-xl'>{produto.name}</h1>
-            <Link className='pl-4 text-red-600 text-2xl block font-bold' href={`/cardapio`}>X</Link>
-        </div>
-        <div className='flex-1 h-[380px]  lg:overflow-y-scroll overflow-y-hidden py-2'>
-            <p>{produto.description}</p>
-        <p className=' font-bold mt-2'>R$ {Number(produto.price.replace(",",".")).toFixed(2)}</p>
-        </div>
-        <div className='border-t py-2 flex items-center justify-between'>
-            <button className='bg-red-600 py-3 px-8 rounded-md text-white'>Adicionar ao carrinho</button>
-            <Link href={`/cardapio`} className='text-red-600 font-bold'>← voltar</Link>
-        </div>
-       </div>
+    <div className="lg:p-4 fixed inset-0 bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center z-50">
 
+    <div className='h-screen relative max-w-lg w-full bg-white z-50'>
+      <div className='py-4 border-b w-full flex justify-between px-4 fixed max-w-lg'>
+        <p className='text-center font-bold text-gray-700'>{produto.name}</p>
+        <Link href={`/cardapio`}><IoCloseSharp className='text-3xl text-gray-600'/></Link>
       </div>
+      <div className='overflow-y-scroll mt-16'>
+        <img src={produto.urlImage} alt="" />
+        <div className='p-4'>
+          <p className='font-bold text-gray-700'>R$ {Number(produto.price.replace(",",".")).toFixed(2)}</p>
+          <p className='mt-4 text-gray-600'>{produto.description}</p>
+        </div>
+      </div>
+      <div className='py-4 border-t w-full flex justify-between px-4 fixed items-center bottom-0 max-w-lg mx-auto'>
+        <button className='bg-red-600 px-6 p-3 rounded-md  text-white'>Adicionar ao carrinho</button>
+        <Link href={`/cardapio`}>← Voltar</Link>
+      </div>
+    </div>
+
     </div>
   );
 };
