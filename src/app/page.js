@@ -5,7 +5,7 @@ import { FaInstagram,FaFacebook } from "react-icons/fa";
 
 const page = () => {
   return (
-    <div className="p-4 w-full mx-auto bg-[#F5F3EF]  flex ">
+    <div className="p-4 w-full mx-auto bg-[#F5F3EF] min-h-screen  flex ">
      
        <div className='max-w-7xl w-full flex items-start justify-between flex-col lg:flex-row mx-auto mt-10'>
         <div className='top-10 animaLeft'>
