@@ -58,8 +58,9 @@ const page = () => {
 
 
 
+
   return (
-    <div className='bg-black inset-0 fixed bg-opacity-15 backdrop-blur-sm flex items-center justify-center p-4'>
+    <div className='bg-black inset-0 fixed bg-opacity-15 backdrop-blur-sm flex items-center justify-center p-4 z-30'>
         {erro && <div className='fixed inset-0 flex items-center justify-center bg-white h-10 border-b border-red-600 anima top-10'>
             <p className='text-red-600 font-bold py-4'>{erro} 😢</p>
         </div>}

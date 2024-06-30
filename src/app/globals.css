@@ -11,6 +11,10 @@
   }
 }
 
+body{
+  background-color: #F5F3EF;
+}
+
 
 .anima{
   animation: anima .6s ease-in-out;
@@ -39,4 +43,103 @@
 .link::hover{
 background-color: red;
 display: block;
+}
+
+.hamb{
+  border-top: 3px solid white;
+  display: block;
+  width: 25px;
+  transition: .4s ease-in-out;
+}
+
+.hamb::after,.hamb::before{
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-top: 6px;
+  position: relative;
+  transition: .4s ease-in-out;
+}
+
+.hamb.ativo{
+  border-top-color: transparent;
+}
+
+.hamb.ativo::before{
+  transform: rotate(135deg);
+  top: -6px;
+}
+
+.hamb.ativo::after{
+  transform: rotate(-135deg);
+  margin-top: -2px;
+  top: -6px;
+}
+
+.animaLeft {
+  animation: animaLeft .6s ease-in-out;
+}
+
+
+@keyframes animaLeft {
+  from{
+transform: translate3d(-100px,0,0);
+  } to{
+    transform: translate3d(0,0,0);
+  }
+}
+
+
+
+.animaRight {
+  animation: animaRight 1s ease-in-out;
+}
+
+
+@keyframes animaRight {
+  from{
+transform: translate3d(100px,0,0) scale(0);
+
+opacity: 0;
+  } to{
+    transform: translate3d(0,0,0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.animaBefore::before{
+  animation: animaBefore 1s ease-in-out;
+}
+
+
+@keyframes animaBefore {
+  from{
+    width: 0px;
+  }to{
+width: 100px;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;  
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: red; 
+  border-radius: 20px;   
+  border: 3px solid #f1f1f1; 
+}
+
+
+html {
+  scrollbar-width: thin;  
+  scrollbar-color: red #f1f1f1; 
 }

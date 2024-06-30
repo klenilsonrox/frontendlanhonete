@@ -276,7 +276,7 @@ function closeModalEndereco(e){
     
 }
 
-console.log(endereco)
+
 
   return (
     <div className="p-4 max-w-7xl mx-auto mt-4">
@@ -291,7 +291,7 @@ console.log(endereco)
 
        {user!==null && user && <div className='bg-gray-100 rounded-md'>
        <div className='flex  justify-between items-center w-full max-w-sm p-2'>
-       <h1 className='text-3xl font-bold text-gray-600'>Dados de acesso</h1>
+       <h1 className='text-2xl font-bold text-gray-600'>Dados de acesso</h1>
        <button className='text-green-600 py-3 rounded-md font-bold' onClick={openModalDados}>Alterar</button>
        </div>
       <div className='mt-2  p-2'>
@@ -305,7 +305,7 @@ console.log(endereco)
 
       {endereco.status!==404 && <div className='mt-4 bg-gray-100 p-2 rounded-md'>
         <div className='flex  justify-between items-center max-w-sm '>
-      <h1 className='text-3xl font-bold text-gray-600'>Endereço</h1>
+      <h1 className='text-2xl font-bold text-gray-600'>Endereço</h1>
       <button className='text-green-600 rounded-md font-bold' onClick={openModalEndereco}>Alterar</button>
       </div>
       <div className='mt-6'>
