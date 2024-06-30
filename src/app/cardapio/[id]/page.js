@@ -20,7 +20,7 @@ const page =async ({params}) => {
     <div className="lg:p-4 fixed inset-0 bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center z-50">
 
     <div className='h-screen relative max-w-lg w-full bg-white z-50'>
-      <div className='overflow-y-scroll mt-16'>
+      <div className='overflow-y-scroll '>
         <img src={produto.urlImage} alt="" />
         <div className='p-4'>
           <p className='font-bold text-gray-700'>R$ {Number(produto.price.replace(",",".")).toFixed(2)}</p>
