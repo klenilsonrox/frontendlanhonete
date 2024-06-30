@@ -19,9 +19,9 @@ const page =async ({params}) => {
   return (
     <div className="lg:p-4 fixed inset-0 bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center z-50">
 
-    <div className='h-screen relative max-w-lg w-full overflow-y-scroll bg-white z-50  flex justify-between flex-col'>
+    <div className='h-screen relative max-h-[568px] max-w-lg w-full overflow-y-scroll bg-white z-50  flex justify-between flex-col'>
       <div className='flex flex-col'>
-        <img src={produto.urlImage} alt="" />
+        <img src={produto.urlImage} alt="" className='lg:max-w-[300px]' />
         <div className='p-4 flex-1'>
           <div className='flex items-center justify-between flex-1'>
             <p className='font-bold text-gray-700'>{produto.name}</p>
