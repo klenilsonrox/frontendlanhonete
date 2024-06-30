@@ -1,5 +1,5 @@
 'use client'
-
+import { IoIosArrowBack } from "react-icons/io";
 import { baseUrl } from '@/app/utils/baseUrl';
 import Link from 'next/link';
 import React from 'react';
@@ -19,11 +19,12 @@ const page =async ({params}) => {
   return (
     <div className="lg:p-4 fixed inset-0 bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center z-50">
 
-    <div className='h-screen relative max-h-[568px] max-w-lg w-full overflow-y-scroll bg-white z-50  flex justify-between flex-col'>
+    <div className='h-screen relative max-h-[568px] max-w-lg w-full overflow-y-scroll bg-white rounded-lg z-50  flex justify-between flex-col'>
+      <Link href={`/cardapio`} className="absolute bg-white p-4  rounded-md top-2 left-2"><IoIosArrowBack className="text-2xl text-red-600"/></Link>
       <div className='flex flex-col'>
         <img src={produto.urlImage} alt="" className='lg:max-w-[300px]' />
-        <div className='p-4 flex-1'>
-          <div className='flex items-center justify-between flex-1'>
+        <div className='flex-1 bg-white p-4 rounded-[60px] z-20 '>
+          <div className='flex items-center justify-between flex-1 '>
             <p className='font-bold text-gray-700'>{produto.name}</p>
           <p className='font-bold text-gray-700'>R$ {Number(produto.price.replace(",",".")).toFixed(2)}</p>
           </div>
