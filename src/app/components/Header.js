@@ -60,8 +60,8 @@ const [openMenu,setOpenMenu]=useState(false)
                 <li><Link href="/sobre" className=' px-4 py-2 lg:py-0 block' onClick={closeMenu}>Sobre nós</Link></li>
                 <li><Link href="/contato" className=' px-4 py-2 lg:py-0 block' onClick={closeMenu}>Contato</Link></li>
                 {!user && <li><Link href="/login" className='p-2 block' onClick={closeMenu}>Entrar</Link></li>}
-                {user && <li className='my-1  cursor-pointer flex items-center justify-center z-40' onClick={openPerfil}><FaUserCircle className='text-3xl ml-2'/>
-                {perfilOpen && <div className='absolute top-[55px] font-medium  bg-white lg:right-0 text-gray-600 shadow-sm border w-[200px] p-4 animaPerfil flex flex-col '>
+                {user && <li className='my-1  cursor-pointer flex-col flex items-center justify-center z-40' onClick={openPerfil}><FaUserCircle className='text-3xl ml-2'/>
+                {perfilOpen && <div className='lg:absolute top-[55px] font-medium  bg-white text-gray-600 shadow-sm border w-[200px] p-4 mt-2 animaPerfil flex flex-col '>
                   <Link href="/conta/perfil" onClick={closeMenu} className='border-b-transparent hover:border-b hover:border-b-green-600 relative flex items-center gap-3 before:h-2 before:w-2 before:bg-green-600 before:rounded-full before:flex'>ver perfil</Link>
                   {user.isAdmin && <Link href="/conta/dashboard" onClick={closeMenu} className='border-b-transparent hover:border-b hover:border-b-green-600 relative flex items-center gap-3 before:h-2 before:w-2 before:bg-green-600 before:rounded-full before:flex'>Admin</Link>}
                   <li onClick={logout} className='border-b-transparent hover:border-b hover:border-b-red-600 relative flex items-center gap-3 before:h-2 before:w-2 before:bg-red-600 before:rounded-full before:flex'>Sair</li>
