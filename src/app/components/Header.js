@@ -54,7 +54,7 @@ const [openMenu,setOpenMenu]=useState(false)
       <button className='absolute right-4 top-5 border p-1 text-white  lg:hidden z-20 flex items-center gap-2' onClick={abrirMenu}>Menu <span className={`hamb ${openMenu ? "ativo":""}`}></span></button>
         <header className="p-4 max-w-7xl mx-auto flex justify-between items-center flex-col lg:flex-row relative">
             <Link href={`/`} className='text-xl block'>RxBurguer</Link>
-            <ul className={`flex items-center z-30 flex-col text-gray-900 bg-white lg:bg-red-600 lg:text-white lg:flex-row transition-all ${openMenu ? "h-screen":"h-0"} overflow-hidden lg:h-auto absolute w-full top-[60px]  lg:pt-0 lg:w-auto lg:top-0 lg:static`}>
+            <ul className={`flex items-center z-30 flex-col text-gray-900 bg-white lg:bg-red-600 lg:text-white lg:flex-row transition-all ${openMenu ? "h-screen":"h-0"} overflow-hidden lg:h-auto absolute w-full top-[70px]  lg:pt-0 lg:w-auto lg:top-0 lg:static`}>
                 <li><Link href="/" className='  px-4 py-2 lg:py-0 block' onClick={closeMenu}>inicio</Link></li>
                 <li><Link href="/cardapio" className=' px-4 py-2 lg:py-0 block' onClick={closeMenu}>Cardapio</Link></li>
                 <li><Link href="/sobre" className=' px-4 py-2 lg:py-0 block' onClick={closeMenu}>Sobre nós</Link></li>
