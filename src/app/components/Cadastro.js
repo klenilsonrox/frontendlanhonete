@@ -72,7 +72,7 @@ const Cadastro = () => {
 
             if(dados.message==="usuário cadastrado com sucesso"){
                 alert("usuário cadastrado com sucesso")
-                window.location.href="/login"
+                window.location.href="/-/login"
             }
          
         } catch (error) {
