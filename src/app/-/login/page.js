@@ -1,8 +1,10 @@
 'use client'
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
-import { Login } from '../actions/Login';
-import { getToken } from '../actions/GetToken';
+
+
+import { Login } from '@/app/actions/Login';
+import { getToken } from '@/app/actions/GetToken';
 
 
 
@@ -77,7 +79,7 @@ const page = () => {
         <button className='mt-6 bg-red-600 rounded-md text-white py-3 mb-6 flex items-center justify-center' disabled={loading}> {loading && <div className='w-6 h-6 rounded-full border-4 border-r-transparent animate-spin'></div> } {!loading && <span>Entrar</span>}</button>
         <div className='flex gap-4'>
             <p>Não tem uma conta ?</p>
-            <Link href="/cadastro" className='text-blue-600 underline mb-4'>Cadastre-se</Link>
+            <Link href="/-/cadastro" className='text-blue-600 underline mb-4'>Cadastre-se</Link>
         </div>
       </form>
     </div>

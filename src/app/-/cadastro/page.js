@@ -1,7 +1,7 @@
 import React from 'react';
-import Cadastro from '../components/Cadastro';
-import { getToken } from '../actions/GetToken';
+import Cadastro from '../../components/Cadastro';
 import { redirect } from 'next/navigation';
+import { getToken } from '@/app/actions/GetToken';
 
 const page =async () => {
 

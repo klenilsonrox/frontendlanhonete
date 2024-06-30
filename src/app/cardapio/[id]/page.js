@@ -19,7 +19,7 @@ const page =async ({params}) => {
   return (
     <div className="lg:p-4 fixed inset-0 bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center z-50">
 
-    <div className='h-screen relative max-w-lg w-full bg-white z-50 overflow-y-scroll flex justify-between flex-col'>
+    <div className='h-screen relative max-w-lg w-full overflow-y-scroll bg-white z-50  flex justify-between flex-col'>
       <div className='flex flex-col'>
         <img src={produto.urlImage} alt="" />
         <div className='p-4 flex-1'>
@@ -30,7 +30,7 @@ const page =async ({params}) => {
           <p className='mt-4 text-gray-600'>{produto.description}</p>
         </div>
       </div>
-      <div className='py-4 border-t w-full flex justify-between px-4  items-center bottom-0 max-w-lg mx-auto'>
+      <div className='py-4 border-t w-full flex justify-between px-4  items-center bottom-0 max-w-lg mx-auto pb-4'>
         <button className='bg-red-600 px-6 p-3 rounded-md  text-white'>Adicionar ao carrinho</button>
         <Link href={`/cardapio`}>← Voltar</Link>
       </div>

@@ -106,7 +106,7 @@ const Cadastro = () => {
         <button className='mt-6 bg-red-600 rounded-md text-white py-3 mb-6 flex items-center justify-center' disabled={loading}> {loading && <div className='w-6 h-6 rounded-full border-4 border-r-transparent animate-spin'></div> } {!loading && <span>Cadastrar</span>}</button>
         <div className='flex gap-4'>
             <p>Já Possui uma conta ?</p>
-            <Link href="/login" className='text-blue-600 underline mb-4'>Faça o Login</Link>
+            <Link href="/-/login" className='text-blue-600 underline mb-4'>Faça o Login</Link>
         </div>
       </form>
     </div>

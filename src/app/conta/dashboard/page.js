@@ -80,8 +80,8 @@ async function deletarItem(item){
     <div className="p-4 max-w-7xl mx-auto ">
       <h1 className='text-2xl font-bold'>Produtos cadastrados</h1>
       {produtos.map(produto=> (
-        <div className='mt-4 border-b pb-4 grid grid-cols-4 items-center gap-2'>
-          <img src={produto.urlImage} alt={`imagem do ${produto.name}`}  className='max-w-[80px] rounded-md flex-1'/>
+        <div className='mt-4 border-b  grid grid-cols-4 items-center gap-2 rounded-md bg-gray-200'>
+          <img src={produto.urlImage} alt={`imagem do ${produto.name}`}  className='w-full max-w-[80px]  rounded-md flex-1'/>
           <div>
             <p>{produto.name}</p>
             <p className='font-medium'>R$ {Number(produto.price.replace(",",".")).toFixed(2)}</p>

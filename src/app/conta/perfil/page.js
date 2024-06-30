@@ -289,7 +289,8 @@ function closeModalEndereco(e){
         <p className='bg-white p-4 border-4 border-b-green-600 anima'>{sucess}</p>
     </div>}
 
-       {user!==null && user && <div className='bg-gray-100 rounded-md'>
+       <div className='h-screen'>
+       {user!==null && user && <div className='bg-gray-200 rounded-md '>
        <div className='flex  justify-between items-center w-full max-w-sm p-2'>
        <h1 className='text-2xl font-bold text-gray-600'>Dados de acesso</h1>
        <button className='text-green-600 py-3 rounded-md font-bold' onClick={openModalDados}>Alterar</button>
@@ -303,7 +304,7 @@ function closeModalEndereco(e){
 
         { endereco.status===404 && <button className='mt-4 bg-green-600 text-white py-3 px-6 rounded-md' onClick={openModalCadastro}>Cadastrar endereço</button> }
 
-      {endereco.status!==404 && <div className='mt-4 bg-gray-100 p-2 rounded-md'>
+      {endereco.status!==404 && <div className='mt-4 bg-gray-200 p-2 rounded-md'>
         <div className='flex  justify-between items-center max-w-sm '>
       <h1 className='text-2xl font-bold text-gray-600'>Endereço</h1>
       <button className='text-green-600 rounded-md font-bold' onClick={openModalEndereco}>Alterar</button>
@@ -316,6 +317,7 @@ function closeModalEndereco(e){
       <p>Complemento : {endereco.complemento}</p>
       </div>
       </div>}
+       </div>
 
 
 
