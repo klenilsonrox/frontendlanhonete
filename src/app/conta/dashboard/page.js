@@ -80,7 +80,7 @@ async function deletarItem(item){
     <div className="p-4 max-w-7xl mx-auto ">
       <div className='flex justify-between flex-col lg:flex-row items-center'>
       <h1 className='text-2xl font-bold order-2 lg:order-first text-gray-500'>Produtos cadastrados</h1>
-      <button className='py-3 px-8 text-white rounded-md bg-green-600 uppercase my-3'>Adicionar produto</button>
+      <Link href={`/conta/dashboard/add`} className='py-3 px-8 text-white rounded-md bg-green-600 uppercase my-3'>Adicionar produto</Link>
       </div>
       {produtos.map(produto=> (
         <div className='mt-4 border-b  grid grid-cols-4 items-center gap-2 rounded-md bg-gray-200 text-gray-500'>
@@ -91,7 +91,7 @@ async function deletarItem(item){
           </div>
           <p className='text-truncate-2-line max-w-[200px] truncate lg:w-full flex-1 hidden lg:flex'>{produto.description}</p>
           <div className='flex items-center gap-2'>
-          <FaEdit className='text-2xl cursor-pointer block text-green-600'/>
+          <Link href={`/conta/dashboard/add/${produto._id}`}><FaEdit className='text-2xl cursor-pointer block text-green-600'/></Link>
           <MdDelete className='text-2xl cursor-pointer text-red-600' onClick={()=>setOpenModalDelete(true)}/>
             {/* inicio modal delete */}
 {modalDelete && <div className='fixed inset-0 bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center p-4'>
