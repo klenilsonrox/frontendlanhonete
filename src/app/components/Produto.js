@@ -8,17 +8,17 @@ import { FaRegClock } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 const Produto = ({produto}) => {
   return (
-    <div className="lg:p-4  inset-0 bg-white flex items-start justify-center z-50 overflow-y-scroll min-h-screen">
+    <div className="lg:p-4  inset-0 bg-white flex items-start justify-center  overflow-y-scroll min-h-screen">
 
-<div className='max-w-7xl w-full mx-auto gap-4 flex flex-col lg:flex-row relative mt-10'>
+<div className='max-w-7xl w-full mx-auto gap-4 flex flex-col lg:flex-row top-0 bg-white fixed bottom-0 lg:static lg:mt-10 overflow-y-scroll z-50'>
 <div className='relative'>
    <Link href={`/cardapio`} className='absolute bg-white rounded-full top-4 left-4 p-2'>< IoIosArrowBack className='text-2xl'/></Link>
 <img src={produto.urlImage} alt="" className=' lg:rounded-3xl max-w-[500px] w-full'/>
 </div>
-<div className='border rounded-tl-3xl rounded-tr-3xl w-full lg:rounded-3xl shadow-sm bg-white p-6 relative top-[-40px] lg:top-0 flex flex-col'>
+<div className='rounded-tl-3xl rounded-tr-3xl w-full lg:rounded-3xl  bg-white p-6 relative top-[-40px] lg:top-0 flex flex-col'>
     <h1 className='text-xl font-semibold'>{produto.name}</h1>
     <p className='mt-4 text-xl font-semibold'>R$ {Number(produto.price.replace(",",".")).toFixed(2)}</p>
-    <div className='rounded-xl border bg-card text-card-foreground shadow-sm mt-6 flex justify-around py-3'>
+    <div className='rounded-xl border  shadow-sm mt-6 flex justify-around py-3'>
         <div className='flex flex-col items-end'>
         <p className='text-xs text-gray-500 flex items-center gap-2'>Entrega <MdDirectionsBike /></p>
         <p className='text-xs font-semibold'>R$ 3,00</p>
