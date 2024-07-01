@@ -73,7 +73,7 @@ function closeMenuConfirg(e){
 }
 
   return (
-    <div className=' text-white relative '>
+    <div className=' text-white relative  bg-red-600'>
       
   
         <header className="p-4 max-w-7xl mx-auto flex justify-between bg-red-600  pb-6 lg:flex-row relative">

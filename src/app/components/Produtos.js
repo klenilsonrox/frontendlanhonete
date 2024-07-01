@@ -7,7 +7,7 @@ const Produtos = ({produtos}) => {
 
   return (
    
-    <div className="py-4 max-w-7xl w-full grid grid-cols-1 gap-4 lg:grid-cols-2 mx-auto animaLeft">
+    <div className="py-4 max-w-7xl w-full grid grid-cols-1 gap-4 lg:grid-cols-2 mx-auto animaLeft mt-2">
       {produtos.map(produto=> (
         <Link href={`/cardapio/${produto._id}`} className='flex gap-4 border-b pb-4'>
             <picture>
