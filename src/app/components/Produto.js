@@ -10,7 +10,7 @@ const Produto = ({produto}) => {
   return (
     <div className="lg:p-4  inset-0 bg-white flex items-start justify-center z-50 overflow-y-scroll min-h-screen">
 
-<div className='max-w-7xl w-full mx-auto gap-4 flex flex-col lg:flex-row relative'>
+<div className='max-w-7xl w-full mx-auto gap-4 flex flex-col lg:flex-row relative mt-10'>
 <div className='relative'>
    <Link href={`/cardapio`} className='absolute bg-white rounded-full top-4 left-4 p-2'>< IoIosArrowBack className='text-2xl'/></Link>
 <img src={produto.urlImage} alt="" className=' lg:rounded-3xl max-w-[500px] w-full'/>
