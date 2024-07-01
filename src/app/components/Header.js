@@ -13,6 +13,8 @@ import { IoLogOut } from "react-icons/io5";
 import { FaInfoCircle } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import { FaCashRegister } from "react-icons/fa6";
+import { FaHome } from "react-icons/fa";
+
 
 
 
@@ -72,7 +74,12 @@ function closeMenuConfirg(e){
 
   return (
     <div className='bg-red-600 text-white relative pb-4'>
-      {perfilOpen && <div className='bg-black fixed inset-0 w-full backdrop-blur-sm bg-opacity-15 z-50' id='menu' onClick={closeMenuConfirg}>
+      
+  
+        <header className="p-4 max-w-7xl mx-auto flex justify-between items-center flex-col lg:flex-row relative">
+            <Link href={`/`} className='text-xl block'>RxBurguer</Link>
+            <button className='absolute right-4 top-5 border p-1 text-white  z-10 flex items-center gap-2' onClick={()=>setPerfilOpen(true)}>Menu <span className={`hamb ${openMenu ? "ativo":""}`}></span></button>
+            {perfilOpen && <div className='bg-black fixed inset-0 w-full backdrop-blur-sm bg-opacity-15 z-50' id='menu' onClick={closeMenuConfirg}>
       <div className='lg:fixed h-screen font-medium  bg-white top-0 right-0 text-gray-600 shadow-sm border w-[250px] p-4 animaModal flex flex-col '>
         <div className='flex justify-between'>
         <p className='font-semibold'>Menu</p>
@@ -80,7 +87,8 @@ function closeMenuConfirg(e){
         </div>
         <p className='mt-4 text-xl'>{user.username}</p>
         <p className='text-sm text-gray-400'>{user.email}</p>
-        <ul>
+        <ul className='mt-4'>
+        <li><Link href={`/`} onClick={closeMenu} className='border-b-transparent hover:border-b py-1 relative flex items-center gap-1 hover:bg-red-200 hover:text-black rounded-md transition-all'><FaHome  className='text-2xl'/> Início</Link></li>
           <li><Link href={`/cardapio`} onClick={closeMenu} className='border-b-transparent hover:border-b py-1 relative flex items-center gap-1 hover:bg-red-200 hover:text-black rounded-md transition-all'><FaInfoCircle className='text-2xl'/> Cardápio</Link></li>
           <li><Link href={`/sobre`} onClick={closeMenu} className='border-b-transparent hover:border-b py-1 relative flex items-center gap-1 hover:bg-red-200 hover:text-black rounded-md transition-all'><MdRestaurantMenu className='text-2xl'/> Sobre nós</Link></li>
           <li><Link href={`/contato`} onClick={closeMenu} className='border-b-transparent hover:border-b py-1 relative flex items-center gap-1 hover:bg-red-200 hover:text-black rounded-md transition-all'><MdContactPhone className='text-2xl'/> Contato</Link></li>
@@ -95,10 +103,6 @@ function closeMenuConfirg(e){
       
                 </div>
       </div>}
-  
-        <header className="p-4 max-w-7xl mx-auto flex justify-between items-center flex-col lg:flex-row relative">
-            <Link href={`/`} className='text-xl block'>RxBurguer</Link>
-            <button className='absolute right-4 top-5 border p-1 text-white  z-10 flex items-center gap-2' onClick={()=>setPerfilOpen(true)}>Menu <span className={`hamb ${openMenu ? "ativo":""}`}></span></button>
       </header>
     </div>
   );
