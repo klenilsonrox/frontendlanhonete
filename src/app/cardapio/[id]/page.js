@@ -9,10 +9,6 @@ import Produto from "@/app/components/Produto";
 
 const page =async ({params}) => {
 
-
-   const id = params.id
-
-
    const response = await fetch(`${baseUrl}/products/${params.id}`)
    const produto = await response.json()
     

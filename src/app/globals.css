@@ -143,3 +143,22 @@ html {
   scrollbar-width: thin;  
   scrollbar-color: red #f1f1f1; 
 }
+
+
+
+.animaModal{
+  animation: animaModal .6s ease-in-out;
+}
+
+
+@keyframes animaModal {
+  from{
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+  } to{
+    height: 100vh;
+    opacity: 1;
+    visibility: visible;
+  }
+}

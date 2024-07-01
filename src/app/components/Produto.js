@@ -1,26 +1,37 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
+import { MdDirectionsBike } from "react-icons/md";
+import { FaRegClock } from "react-icons/fa";
+
+
 import { IoIosArrowBack } from "react-icons/io";
 const Produto = ({produto}) => {
   return (
-    <div className="lg:p-4 fixed inset-0 bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="lg:p-4  inset-0 bg-white flex items-start justify-center z-50 overflow-y-scroll min-h-screen">
 
-<div className='h-screen relative max-h-[600px] lg:max-h-screen max-w-lg w-full overflow-y-scroll bg-white rounded-lg z-50  flex justify-between flex-col'>
-  <Link href={`/cardapio`} className="absolute bg-white p-4  rounded-md top-2 left-2"><IoIosArrowBack className="text-2xl text-red-600"/></Link>
-  <div className='flex flex-col'>
-    <img src={produto.urlImage} alt="" className=' lg:min-w-full' />  
-    <div className='flex-1 bg-white p-4 rounded-[60px] z-20 '>
-      <div className='flex items-center justify-between flex-1 '>
-        <p className='font-bold text-gray-700'>{produto.name}</p>
-      <p className='font-bold text-gray-700'>R$ {Number(produto.price.replace(",",".")).toFixed(2)}</p>
-      </div>
-      <p className='mt-4 text-gray-600'>{produto.description}</p>
+<div className='max-w-7xl w-full mx-auto gap-4 flex flex-col lg:flex-row relative'>
+<div className='relative'>
+   <Link href={`/cardapio`} className='absolute bg-white rounded-full top-4 left-4 p-2'>< IoIosArrowBack className='text-2xl'/></Link>
+<img src={produto.urlImage} alt="" className=' lg:rounded-3xl max-w-[500px] w-full'/>
+</div>
+<div className='border rounded-tl-3xl rounded-tr-3xl w-full lg:rounded-3xl shadow-sm bg-white p-6 relative top-[-40px] lg:top-0 flex flex-col'>
+    <h1 className='text-xl font-semibold'>{produto.name}</h1>
+    <p className='mt-4 text-xl font-semibold'>R$ {Number(produto.price.replace(",",".")).toFixed(2)}</p>
+    <div className='rounded-xl border bg-card text-card-foreground shadow-sm mt-6 flex justify-around py-3'>
+        <div className='flex flex-col items-end'>
+        <p className='text-xs text-gray-500 flex items-center gap-2'>Entrega <MdDirectionsBike /></p>
+        <p className='text-xs font-semibold'>R$ 3,00</p>
+        </div>
+        <div className='flex flex-col items-end'>
+        <p className='text-xs text-gray-500 flex items-center gap-2'>Entrega <FaRegClock /></p>
+        <p className='text-xs font-semibold'>30 min</p>
+        </div>
     </div>
-  </div>
-  <div className='py-4 border-t w-full flex justify-between px-4  items-center bottom-0 max-w-lg mx-auto pb-4'>
-    <button className='bg-red-600 px-6 p-3 rounded-md  text-white'>Adicionar ao carrinho</button>
-    <Link href={`/cardapio`}>← Voltar</Link>
-  </div>
+    <p className='mt-6 font-semibold'>Ingredientes</p>
+    <p>{produto.description}</p>
+    <button className='inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm text-white mt-6 bg-red-600 h-10 px-4 py-2 w-full font-semibold'>Adicionar a sacola</button>
+</div>
 </div>
 
 </div>
