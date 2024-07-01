@@ -73,11 +73,11 @@ function closeMenuConfirg(e){
 }
 
   return (
-    <div className='bg-red-600 text-white relative pb-4'>
+    <div className=' text-white relative '>
       
   
-        <header className="p-4 max-w-7xl mx-auto flex justify-between items-center flex-col lg:flex-row relative">
-            <Link href={`/`} className='text-xl block'>RxBurguer</Link>
+        <header className="p-4 max-w-7xl mx-auto flex justify-between bg-red-600  pb-6 lg:flex-row relative">
+            <Link href={`/`} className='text-xl block mt-2'>RxBurguer</Link>
             <button className='absolute right-4 top-5 border p-1 text-white  z-10 flex items-center gap-2' onClick={()=>setPerfilOpen(true)}>Menu <span className={`hamb ${openMenu ? "ativo":""}`}></span></button>
             {perfilOpen && <div className='bg-black fixed inset-0 w-full backdrop-blur-sm bg-opacity-15 z-50' id='menu' onClick={closeMenuConfirg}>
       <div className='lg:fixed h-screen font-medium  bg-white top-0 right-0 text-gray-500 shadow-sm border w-[250px] p-4 animaModal flex flex-col '>
