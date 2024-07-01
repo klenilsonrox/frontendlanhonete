@@ -78,9 +78,12 @@ async function deletarItem(item){
 
   return (
     <div className="p-4 max-w-7xl mx-auto ">
-      <h1 className='text-2xl font-bold'>Produtos cadastrados</h1>
+      <div className='flex justify-between flex-col lg:flex-row items-center'>
+      <h1 className='text-2xl font-bold order-2 lg:order-first text-gray-500'>Produtos cadastrados</h1>
+      <button className='py-3 px-8 text-white rounded-md bg-green-600 uppercase my-3'>Adicionar produto</button>
+      </div>
       {produtos.map(produto=> (
-        <div className='mt-4 border-b  grid grid-cols-4 items-center gap-2 rounded-md bg-gray-200'>
+        <div className='mt-4 border-b  grid grid-cols-4 items-center gap-2 rounded-md bg-gray-200 text-gray-500'>
           <img src={produto.urlImage} alt={`imagem do ${produto.name}`}  className='w-full max-w-[80px]  rounded-md flex-1'/>
           <div>
             <p>{produto.name}</p>

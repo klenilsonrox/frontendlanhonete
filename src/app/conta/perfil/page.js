@@ -279,7 +279,7 @@ function closeModalEndereco(e){
 
 
   return (
-    <div className="p-4 max-w-7xl mx-auto mt-4">
+    <div className="p-4 max-w-7xl mx-auto mt-4 z-50">
 
     {erro && <div className='flex inset-0 fixed items-center justify-center bg-black bg-opacity-5 backdrop-blur-sm z-50'>
         <p className='bg-white p-4 border-4 border-b-red-600 anima'>{erro}</p>
@@ -323,7 +323,7 @@ function closeModalEndereco(e){
 
         {/* inicio modal endereco */}
         {modalEndereco && <div className='bg-black bg-opacity-15 backdrop-blur-sm flex items-center justify-center fixed inset-0' id='modalEndereco' onClick={closeModalEndereco}>
-           <div className='max-w-md w-full p-4 bg-white anima'>
+           <div className='max-w-md w-full p-4 bg-white anima rounded-md shadow-md'>
            <h1 className='text-center font-bold text-2xl my-4'>{endereco && <span>Editando endereço</span> } {!endereco && <span>Cadastrando endereço</span> }</h1>
            <form >
             <div className='flex justify-between gap-2'>
