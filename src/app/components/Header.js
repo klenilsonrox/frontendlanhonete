@@ -54,6 +54,7 @@ const [openMenu,setOpenMenu]=useState(false)
 
   function closeMenu(){
     setOpenMenu(false)
+    setPerfilOpen(false)
   }
 
 function closeMenuConfirg(e){
